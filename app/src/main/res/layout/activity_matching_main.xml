@@ -1,18 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".location_manger_control.Matching_main">
+    tools:context=".location_manger_control.Matching_main"
+    android:orientation="vertical">
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/smasing"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/ultra"
+        android:lineSpacingExtra="-8sp"
+        android:text="@string/smasing"
+        android:textColor="@color/main_color"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="22dp"
+        android:text="내 스터디"
+        android:fontFamily="@font/montserratextrabold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:layout_marginLeft="22dp"
+        android:text="대충 있어보이는 말"
+        android:fontFamily="@font/montserratextrabold"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        >
 
-    </LinearLayout>
+    </TextView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="126dp"
+        android:src="@drawable/matcingmainicon"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="22dp"
+        android:text="원하는 스터디를 찾으세요!"
+        android:textAlignment="center"
+        android:fontFamily="@font/montserratextrabold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        />
+
+    <Button
+        android:layout_width="154dp"
+        android:layout_height="wrap_content"
+        android:background="@color/main_color"
+        android:text="스터디 찾기"
+        android:fontFamily="@font/montserratextrabold"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>
 
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>

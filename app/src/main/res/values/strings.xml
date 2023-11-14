@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Final_StudyMatching_Project</string>
+    <string name="my_study">
+            \u00EB\u0082\u00B4 \u00EC\u008A\u00A4\u00ED\u0084\u00B0\u00EB\u0094\u0094
+        </string>
+    <string name="my_study_sub">
+            \u00EB\u008C\u0080\u00EC\u00B6\u00A9 \u00EC\u009E\u0088\u00EC\u0096\u00B4\u00EB\u00B3\u00B4\u00EC\u009D\u00B4\u00EB\u008A\u0094 \u00EB\u00A7\u0090
+        </string>
+    <string name="smasing">
+            SMASHING
+        </string>
+
 </resources>
