@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".location_manger_control.Matching_main"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/smasing"
+        android:layout_width="wrap_content"
+        android:layout_height="29dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/ultra"
+        android:lineSpacingExtra="-8sp"
+        android:text="@string/smasing"
+        android:textColor="@color/main_color"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserratextrabold"
+        android:text="내 스터디"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/montserratextrabold"
+        android:text="대충 있어보이는 말"
+        android:textColor="@color/black"
+        android:textSize="15sp">
+
+    </TextView>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="126dp"
+        android:src="@drawable/matcingmainicon"/>
+
+
+    <TextView
+        android:layout_width="244dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="71dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserratextrabold"
+        android:text="원하는 스터디를 찾으세요!"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/study_matching_btn"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/roundbutton"
+        android:fontFamily="@font/montserratextrabold"
+        android:text="스터디 찾기"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="188dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/home_btn"
+            android:layout_width="29dp"
+            android:layout_height="36dp"
+            android:background="@drawable/homebtn"
+            android:fontFamily="@font/montserratextrabold"
+            />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/study_btn"
+            android:layout_width="34dp"
+            android:layout_height="35dp"
+            android:background="@drawable/stdbtn"
+
+            android:textColor="@color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/notice_board_btn"
+            android:layout_width="29dp"
+            android:layout_height="34dp"
+            android:background="@drawable/noticebtn"
+            android:fontFamily="@font/montserratextrabold"
+            android:textColor="@color/white" />
+
+        <Space
+            android:layout_width="50dp"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/my_page_btn"
+            android:layout_width="37dp"
+            android:layout_height="32dp"
+            android:background="@drawable/mypagebtn"
+            android:fontFamily="@font/montserratextrabold"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserratextrabold"
+        android:text="홈"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>
