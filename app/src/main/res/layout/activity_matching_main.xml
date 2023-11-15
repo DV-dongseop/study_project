@@ -20,7 +20,7 @@
         android:lineSpacingExtra="-8sp"
         android:text="@string/smasing"
         android:textColor="@color/main_color"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="28dp"
         tools:layout_editor_absoluteY="18dp" />
@@ -33,7 +33,7 @@
         android:text="내 스터디"
         android:fontFamily="@font/montserratextrabold"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         />
     <TextView
         android:layout_width="match_parent"
@@ -43,7 +43,7 @@
         android:text="대충 있어보이는 말"
         android:fontFamily="@font/montserratextrabold"
         android:textColor="@color/black"
-        android:textSize="15dp"
+        android:textSize="15sp"
         >
 
     </TextView>
@@ -61,19 +61,69 @@
         android:textAlignment="center"
         android:fontFamily="@font/montserratextrabold"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="20sp"
         />
 
+
     <Button
-        android:layout_width="154dp"
+        android:id="@+id/study_matching_btn"
+        android:layout_width="119dp"
         android:layout_height="wrap_content"
-        android:background="@color/main_color"
-        android:text="스터디 찾기"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_button"
         android:fontFamily="@font/montserratextrabold"
-        android:textColor="@color/white"/>
+        android:text="스터디 찾기"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="190dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/study_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserratextrabold"
+            android:text="스터디"
+            android:textColor="@color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:id="@+id/notice_board_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserratextrabold"
+            android:text="게시판"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/my_page_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/montserratextrabold"
+            android:text="마이페이지"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/home_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserratextrabold"
+        android:text="홈"
+        android:textColor="@color/white" />
 
 
 </LinearLayout>
-
-
-
