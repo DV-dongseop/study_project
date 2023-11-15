@@ -2,4 +2,16 @@
 <resources>
 
     <style name="Theme.Final_StudyMatching_Project" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="my_study">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+        <style name="my_study_sub">
+            <item name="android:textSize">15sp</item>
+            <item name="android:textColor">#3E3E3E</item>
+        </style>
+    </style>
+    <style name="smasing">
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">#3D4AE7</item>
+    </style>
 </resources>
