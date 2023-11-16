@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.final_studymatching_project.R
 
-class Matching_main : AppCompatActivity() {
+class Matchingmain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_matching_main)
+        setContentView(R.layout.activity_matchingmain)
     }
 }
