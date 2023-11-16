@@ -2,43 +2,21 @@ package com.example.final_studymatching_project
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import com.example.final_studymatching_project.location_manger_control.MatchingMain
 import com.example.final_studymatching_project.ui.theme.Final_StudyMatching_ProjectTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
-            Final_StudyMatching_ProjectTheme() {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    MainContent()
-                }
-            }
-        }
-    }
+        setContentView(R.layout.activity_main)
 
-    @Composable
-    fun MainContent() {
-        // XML에서 정의된 버튼 사용
-        Button(
-            onClick = { navigateToMatchingMain() },
-            modifier = Modifier.fillMaxSize()
-        ) {
-            Text(text = "Matching")
+        val button: Button = findViewById(R.id.btn1)
+        button.setOnClickListener {
+            val intent = Intent(this, MatchingMain::class.java)
+            startActivity(intent)
         }
-    }
-
-    private fun navigateToMatchingMain() {
-        val intent = Intent(this, MatchingMain::class.java)
-        startActivity(intent)
     }
 }
