@@ -104,11 +104,25 @@ class MyLocation(private val activity: Activity) : ActivityCompat.OnRequestPermi
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (requestCode == GPS_UTIL_LOCATION_PERMISSION_REQUEST_CODE) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                // 권한이 부여되었을 때 위치 업데이트 요청 시작
+                // 권한이 부여 되었을 때 위치 업데이트 요청 시작
                 mLocationRequest?.let {
+                    if (ActivityCompat.checkSelfPermission(
+                            activity,
+                            Manifest.permission.ACCESS_FINE_LOCATION
+                        ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                            activity,
+                            Manifest.permission.ACCESS_COARSE_LOCATION
+                        ) != PackageManager.PERMISSION_GRANTED
+                    ) {
+                        // 권한이 없는 상태로 올 때 여기로 진입
+                        Log.d("ttt", "onRequestPermissionsResult() _ 권한 허용 거부")
+                        Toast.makeText(activity, "권한이 없어 해당 기능을 실행할 수 없습니다.", Toast.LENGTH_SHORT).show()
+                        return
+                    }
                     mFusedLocationProviderClient?.requestLocationUpdates(it, mLocationCallback, null)
                 }
             } else {
+                // 권한이 거부 되었을 때 여기로 진입
                 Log.d("ttt", "onRequestPermissionsResult() _ 권한 허용 거부")
                 Toast.makeText(activity, "권한이 없어 해당 기능을 실행할 수 없습니다.", Toast.LENGTH_SHORT).show()
             }
