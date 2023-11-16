@@ -7,6 +7,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import com.example.final_studymatching_project.location_manger_control.MatchingMain
 import com.example.final_studymatching_project.ui.theme.Final_StudyMatching_ProjectTheme
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +18,9 @@ class MainActivity : ComponentActivity() {
         val button: Button = findViewById(R.id.btn1)
         button.setOnClickListener {
             val intent = Intent(this, MatchingMain::class.java)
+            val database = Firebase.database
+            val myRef = database.getReference("message")
+            myRef.setValue("Success")
             startActivity(intent)
             finish()
         }
