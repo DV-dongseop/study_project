@@ -17,6 +17,7 @@ class MainActivity : ComponentActivity() {
         button.setOnClickListener {
             val intent = Intent(this, MatchingMain::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
