@@ -18,6 +18,9 @@ import com.google.android.gms.location.LocationCallback
 import com.google.android.gms.location.LocationRequest
 import com.google.android.gms.location.LocationResult
 import com.google.android.gms.location.LocationServices
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class MyLocation(private val activity: Activity) : ActivityCompat.OnRequestPermissionsResultCallback {
     private val TAG = "MyLocation"
@@ -28,12 +31,13 @@ class MyLocation(private val activity: Activity) : ActivityCompat.OnRequestPermi
     private lateinit var mLocationRequest: LocationRequest
     private var currentLatitude: Double = 0.0
     private var currentLongitude: Double = 0.0
+    private lateinit var databaseReference: DatabaseReference
 
     init {
         // 위치 정보 요청을 위한 LocationRequest 초기화
         mLocationRequest = LocationRequest.create()
         mLocationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        mLocationRequest.interval = 60000
+        mLocationRequest.interval = 1000
     }
 
 
@@ -53,6 +57,19 @@ class MyLocation(private val activity: Activity) : ActivityCompat.OnRequestPermi
                 currentLatitude = mLastLocation.latitude
                 currentLongitude = mLastLocation.longitude
                 Log.w(TAG, "latitude: $currentLatitude, longitude: $currentLongitude")
+                val database = Firebase.database
+                databaseReference = database.getReference("example")
+                val locationMap = mapOf(
+                    "latitude" to mLastLocation.latitude,
+                    "longitude" to mLastLocation.longitude
+                )
+                databaseReference.setValue(locationMap)
+                    .addOnSuccessListener {
+                        Log.d(TAG, "Location data successfully saved to Firebase")
+                    }
+                    .addOnFailureListener {
+                        Log.e(TAG, "Error saving location data to Firebase: $it")
+                    }
             }
         }
     }
@@ -114,6 +131,7 @@ class MyLocation(private val activity: Activity) : ActivityCompat.OnRequestPermi
 
     private fun stopLocationUpdates() {
         mFusedLocationProviderClient?.removeLocationUpdates(mLocationCallback)
+
     }
 
 }

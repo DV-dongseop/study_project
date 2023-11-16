@@ -18,9 +18,6 @@ class MainActivity : ComponentActivity() {
         val button: Button = findViewById(R.id.btn1)
         button.setOnClickListener {
             val intent = Intent(this, MatchingMain::class.java)
-            val database = Firebase.database
-            val myRef = database.getReference("message")
-            myRef.setValue("Success")
             startActivity(intent)
             finish()
         }
