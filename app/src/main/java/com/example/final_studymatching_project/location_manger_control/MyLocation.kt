@@ -37,7 +37,7 @@ class MyLocation(private val activity: Activity) : ActivityCompat.OnRequestPermi
         // 위치 정보 요청을 위한 LocationRequest 초기화
         mLocationRequest = LocationRequest.create()
         mLocationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        mLocationRequest.interval = 1000
+        mLocationRequest.interval = 10000
     }
 
 
