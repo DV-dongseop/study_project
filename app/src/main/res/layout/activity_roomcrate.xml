@@ -4,10 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".location_manger_control.MatchingMain"
+    tools:context=".location_manger_control.Roomcrate"
     android:orientation="vertical">
-
-
 
     <TextView
         android:id="@+id/smasing"
@@ -27,10 +25,10 @@
         tools:layout_editor_absoluteY="18dp" />
 
     <Button
-        android:id="@+id/study_createbtn"
+        android:id="@+id/cancelbtn"
         android:layout_width="31dp"
         android:layout_height="30dp"
-        android:background="@drawable/plusbtn"
+        android:background="@drawable/cancelbtn"
         android:layout_marginLeft="330dp"
         />
 
@@ -40,7 +38,7 @@
         android:layout_marginLeft="22dp"
 
         android:fontFamily="@font/montserratextrabold"
-        android:text="내 스터디"
+        android:text="모임 만들기"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -53,36 +51,70 @@
         android:text="대충 있어보이는 말"
         android:textColor="@color/black"
         android:textSize="15sp">
-
     </TextView>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="126dp"
-        android:src="@drawable/matcingmainicon"/>
 
-
-    <TextView
-        android:layout_width="244dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="71dp"
-        android:layout_marginTop="15dp"
-        android:fontFamily="@font/montserratextrabold"
-        android:text="원하는 스터디를 찾으세요!"
-        android:textAlignment="center"
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:text="모임명"
+        android:fontFamily="@font/montserratextrabold"
+        android:background="@drawable/exittext"
+        android:textSize="10sp" />
 
+    <Button
+        android:id="@+id/choose_numberbtn"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="인원수 설정하기"
+        android:background="@drawable/numberselectbtn"
+        android:fontFamily="@font/montserratextrabold"
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/choose_datebtn"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="목표기간 설정하기"
+        android:fontFamily="@font/montserratextrabold"
+        android:textColor="@color/black"
+        android:background="@drawable/numberselectbtn" />
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:text="모임설명"
+        android:fontFamily="@font/montserratextrabold"
+        android:background="@drawable/exittext"
+        android:textSize="10sp" />
     <Button
         android:id="@+id/study_matching_btn"
         android:layout_width="119dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="130dp"
+        android:layout_gravity="center"
         android:layout_marginTop="16dp"
         android:background="@drawable/roundbutton"
         android:fontFamily="@font/montserratextrabold"
-        android:text="스터디 찾기"
+        android:text="스터디 생성"
         android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/selectedCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/montserratextrabold"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -93,7 +125,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="96dp"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -102,8 +134,7 @@
             android:layout_width="29dp"
             android:layout_height="36dp"
             android:background="@drawable/homebtn"
-            android:fontFamily="@font/montserratextrabold"
-            />
+            android:fontFamily="@font/montserratextrabold" />
 
         <Space
             android:layout_width="50dp"
@@ -143,6 +174,4 @@
             android:textColor="@color/white" />
     </LinearLayout>
 
-
 </LinearLayout>
-
