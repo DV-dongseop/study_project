@@ -32,6 +32,7 @@
         android:layout_height="30dp"
         android:background="@drawable/plusbtn"
         android:layout_marginLeft="330dp"
+        android:onClick="createRoom"
         />
 
     <TextView
