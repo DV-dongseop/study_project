@@ -1,3 +1,5 @@
+package com.example.final_studymatching_project.location_manger_control
+
 import android.app.DatePickerDialog
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

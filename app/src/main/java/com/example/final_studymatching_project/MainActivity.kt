@@ -18,8 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.example.final_studymatching_project.location_manger_control.MatchingMain
 import com.example.final_studymatching_project.ui.theme.Final_StudyMatching_ProjectTheme
-import com.google.firebase.Firebase
+
 import com.google.firebase.database.database
+import com.google.firebase.ktx.Firebase
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +36,7 @@ class MainActivity : ComponentActivity() {
             }
         }
         //파이어베이스 실시간 데이터 체킹용
-        val database = Firebase.database
+        val database = com.google.firebase.Firebase.database
         val myRef = database.getReference("Checking")
         myRef.setValue("Success")
     }

@@ -1,6 +1,6 @@
 package com.example.final_studymatching_project.location_manger_control
 
-import Roomcrate
+
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
